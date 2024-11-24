@@ -577,6 +577,74 @@ input, select, textarea {
 		opacity: 1.0;
 	}
 
+	.tech-stack-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 20px;
+	  }
+	  
+	  
+	  .tech-stack-card {
+		background-color: #f5f5f5;
+		border-radius: 8px;
+		padding: 20px;
+		text-align: center;
+	  }
+
+	  .tech-stack-card1 {
+		background-color: #000000;
+		border-radius: 8px;
+		padding: 20px;
+		text-align: center;
+	  }
+
+	  
+	  
+	  .tech-stack-icon {
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+	  }
+
+	  .cert-stack-icon {
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+	  }
+	  
+	  .tech-stack-icon img {
+		max-width: 100%;
+		max-height: 100%;
+	  }
+	  
+	  .tech-stack-title {
+		font-size: 18px;
+		font-weight: bold;
+		color: #000000;
+		margin-bottom: 10px;
+	  }
+
+	  .tech-stack-title {
+		font-size: 18px;
+		font-weight: bold;
+		color: #ffffff;
+		margin-bottom: 10px;
+	  }
+	  
+	  .tech-stack-description {
+		font-size: 14px;
+		color: #555;
+	  }
+
+	  .tech-stack-description1 {
+		font-size: 14px;
+		color: #ffffff;
+	  }
+
 /* Box */
 
 	.box {
@@ -1140,9 +1208,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
