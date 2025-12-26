@@ -32,6 +32,9 @@
     dl.timeline dd { margin: 0; }
     .role { font-weight: 600; }
     .note { color: var(--muted); }
+    /* Experience cards (desktop) */
+    .experience-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
+    .experience-card .date { color: var(--muted); font-weight: 600; }
 
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
@@ -44,6 +47,9 @@
       .links a { margin-right: 8px; white-space: normal; display: inline-block; }
       .lang-toggle { justify-content:flex-start; margin-top: 4px; }
       .btn { padding:6px 12px; font-size:14px; }
+      /* Mobile: stack cards */
+      .experience-card { grid-template-columns: 1fr; }
+      .experience-card .date { font-size: 12px; margin: 0 0 6px; }
     }
 
     @media print {
@@ -77,9 +83,9 @@
 
     <div class="section">
       <h2>कार्य अनुभव</h2>
-      <dl class="timeline">
-        <dt>अक्टोबर २०२५–हाल</dt>
-        <dd>
+      <div class="experience-card">
+        <div class="date">अक्टोबर २०२५–हाल</div>
+        <div>
           <div class="role">एआई इन्जिनियर</div>
           <div class="place">Singapore Ecommerce App Pte. Ltd. · पूर्णकालिक</div>
           <div class="note">सिंगापुर · रिमोट</div>
@@ -87,15 +93,17 @@
             <li>एआई विशेषताहरू र अटोमेसन डिजाइन तथा कार्यान्वयन।</li>
             <li>उत्पादन कार्यप्रवाहमा मोडलहरू एकीकृत; मूल्याङ्कन र पुनरावृत्तिमा सहयोग।</li>
           </ul>
-        </dd>
+        </div>
+      </div>
 
-        <dt>मे २०२४–जुलाई २०२५</dt>
-        <dd>
+      <div class="experience-card">
+        <div class="date">मे २०२४–जुलाई २०२५</div>
+        <div>
           <div class="role">सफ्टवेयर इन्जिनियर</div>
           <div class="place">Algorithm Squad FZE · पूर्णकालिक</div>
           <div class="note">दुबई, संयुक्त अरब इमिराट्स · रिमोट</div>
-        </dd>
-      </dl>
+        </div>
+      </div>
     </div>
 
     <div class="section">

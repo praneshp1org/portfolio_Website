@@ -35,6 +35,9 @@
     dl.timeline dd { margin: 0; }
     .role { font-weight: 600; }
     .note { color: var(--muted); }
+    /* Experience cards (desktop) */
+    .experience-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
+    .experience-card .date { color: var(--muted); font-weight: 600; }
 
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
@@ -47,6 +50,9 @@
       .links a { margin-right: 8px; white-space: normal; display: inline-block; }
       .lang-toggle { justify-content:flex-start; margin-top: 4px; }
       .btn { padding:6px 12px; font-size:14px; }
+      /* Mobile: stack cards */
+      .experience-card { grid-template-columns: 1fr; }
+      .experience-card .date { font-size: 12px; margin: 0 0 6px; }
     }
 
     /* Print-friendly tweaks */
@@ -81,9 +87,9 @@
 
     <div class="section">
       <h2>Work Experience</h2>
-      <dl class="timeline">
-        <dt>Oct 2025–Present</dt>
-        <dd>
+      <div class="experience-card">
+        <div class="date">Oct 2025–Present</div>
+        <div>
           <div class="role">AI Engineer</div>
           <div class="place">Singapore Ecommerce App Pte. Ltd. · Full‑time</div>
           <div class="note">Singapore · Remote</div>
@@ -91,15 +97,17 @@
             <li>Designed and implemented AI features and automations.</li>
             <li>Integrated models into product workflows; supported evaluation and iteration.</li>
           </ul>
-        </dd>
+        </div>
+      </div>
 
-        <dt>May 2024–Jul 2025</dt>
-        <dd>
+      <div class="experience-card">
+        <div class="date">May 2024–Jul 2025</div>
+        <div>
           <div class="role">Software Engineer</div>
           <div class="place">Algorithm Squad FZE · Full‑time</div>
           <div class="note">Dubai, United Arab Emirates · Remote</div>
-        </dd>
-      </dl>
+        </div>
+      </div>
     </div>
 
     <div class="section">
