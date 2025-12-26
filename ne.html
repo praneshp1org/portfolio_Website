@@ -38,6 +38,11 @@
     /* Entry cards (desktop) */
     .experience-card, .education-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
     .experience-card .date, .education-card .date { color: var(--muted); font-weight: 600; }
+    
+    /* Projects section */
+    .project-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 16px; background:#fff; }
+    .project-card h3 { font-size: 18px; margin: 0 0 8px; font-weight: 600; }
+    .project-card p { margin: 0; color: var(--text); line-height: 1.5; }
 
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
@@ -53,8 +58,11 @@
       /* Mobile: stack cards */
       .experience-card, .education-card { grid-template-columns: 1fr; }
       .experience-card .date, .education-card .date { font-size: 12px; margin: 0 0 6px; }
+      .project-card { padding: 14px; }
+      .project-card h3 { font-size: 16px; }
     }
 
+    /* Print-friendly tweaks */
     @media print {
       body { font-size: 12px; }
       .links { display: none; }
@@ -191,6 +199,60 @@
           <div class="note">जिपिए: ३.८०</div>
           <div class="note">आधार वर्षहरू: टोलीकार्य, अनुशासन, जिज्ञासा</div>
         </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>सम्पन्न/काम गरिएका परियोजनाहरू</h2>
+
+      <div class="project-card">
+        <h3>TheOver.AI</h3>
+        <p>सट्टेबाजका लागि एआई टिप्स र वास्तविक‑समय खेलाडी प्रदर्शन ट्र्याकिङ प्रयोग गर्ने खेल विश्लेषण एप।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>SabdaSagar</h3>
+        <p>१००K+ शब्द भएको अफलाइन नेपाली शब्दकोश, वाक्‑देखि‑पाठ (speech‑to‑text) समर्थित खोज।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Nepal Election App 2079</h3>
+        <p>नेपालको २०७९ निर्वाचनमा वास्तविक‑समय निर्वाचन डाटा, भिजुअलाइजेसन र उम्मेदवार जानकारी प्रदान।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>MCQ Generation using T5 Transformers (शैक्षिक परियोजना)</h3>
+        <p>स्वचालित प्रश्न उत्पादनका लागि फाइन‑ट्युन गरिएको T5‑small मोडेल प्रयोग। SQuAD र RACE डाटासेटमा प्रशिक्षण; प्रश्न‑उत्तर र distractor उत्पादन। Hugging Face + PyTorch प्रयोग।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Cloud Resource Allocation with PSO (एआई परियोजना)</h3>
+        <p>Particle Swarm Optimization मार्फत गतिशील क्लाउड स्रोत आवंटनको सिमुलेसन। Flutter‑आधारित फ्रन्टएन्डमा प्रदर्शन भिजुअलाइजेसन।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>वाक् पहिचान र अनुवाद एप</h3>
+        <p>नेपाली–अंग्रेजीका लागि डिभाइस‑मै speech‑to‑text र अनुवाद मोडेल तैनाथ। TFLite प्रयोग गरी छिटो, अफलाइन प्रदर्शन।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>AutoLead AI (Python + LangChain + n8n)</h3>
+        <p>LangChain + OpenAI प्रयोग गर्ने LLM‑आधारित लिड क्वालिफिकेसन एजेन्ट। n8n मा स्वचालित कार्यहरू ट्रिगर (Airtable, इमेल अपडेट, CRM समक्रमण)।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>DocResponder (Python + FastAPI + RAG)</h3>
+        <p>कागजातबाट सपोर्ट प्रश्नहरूको जवाफ दिने RAG‑आधारित एआई सेवा। छिटो र सम्बन्धित प्रतिक्रियाका लागि FAISS भेक्टर खोज, LangChain र OpenAI संयोजन।</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>पूर्वाधार निगरानी र चेतावनी प्रणाली</h3>
+        <p>Prometheus, Grafana र Alertmanager प्रयोग गरी विस्तृत Linux कमाण्ड‑लाइन संयोजनसहित निगरानी प्रणाली निर्माण। Docker कन्टेनर र Kubernetes (Helm) प्रयोग गरेर तैनाथ। स्वचालित निगरानी र चेतावनी व्यवस्थापनका लागि shell स्क्रिप्टहरू तयार गरियो।</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>स्मार्ट इन्सिडेन्ट राउटर (n8n + Slack + PagerDuty)</h3>
+        <p>Prometheus/CloudWatch बाट आएका अलर्टहरू नक्कली दोहोरिएको छुट्याई (dedup), LLM प्रयोग गरी गम्भीरता वर्गीकरण, र रनबुक सन्दर्भले समृद्ध गरिन्छ। Slack/PagerDuty मार्फत अन‑कॉल टोलीमा पठाउने, स्वतः‑उच्चिकरण (auto‑escalation) र Notion मा पोस्ट‑मोर्टेम सारांश लेख्ने अटोमेसन।</p>
       </div>
     </div>
 

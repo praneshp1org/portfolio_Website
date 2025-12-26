@@ -41,6 +41,11 @@
     /* Entry cards (desktop) */
     .experience-card, .education-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
     .experience-card .date, .education-card .date { color: var(--muted); font-weight: 600; }
+    
+    /* Projects section */
+    .project-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 16px; background:#fff; }
+    .project-card h3 { font-size: 18px; margin: 0 0 8px; font-weight: 600; }
+    .project-card p { margin: 0; color: var(--text); line-height: 1.5; }
 
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
@@ -56,6 +61,8 @@
       /* Mobile: stack cards */
       .experience-card, .education-card { grid-template-columns: 1fr; }
       .experience-card .date, .education-card .date { font-size: 12px; margin: 0 0 6px; }
+      .project-card { padding: 14px; }
+      .project-card h3 { font-size: 16px; }
     }
 
     /* Print-friendly tweaks */
@@ -194,6 +201,60 @@
           <div class="note">GPA: 3.80</div>
           <div class="note">Formative years: teamwork, discipline, curiosity</div>
         </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Projects Delivered/Worked On</h2>
+      
+      <div class="project-card">
+        <h3>TheOver.AI</h3>
+        <p>Sports analytics app for bettors using AI tips and real-time player performance tracking.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>SabdaSagar</h3>
+        <p>Offline Nepali dictionary with 100K+ words and speech-to-text powered search.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Nepal Election App 2079</h3>
+        <p>Provided real-time electoral data with visualization and candidate information during Nepal's 2079 elections.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>MCQ Generation using T5 Transformers (Academic Project)</h3>
+        <p>Built a system using fine-tuned T5-small models for automatic question generation. Trained on SQuAD and RACE datasets for question-answer and distractor generation. Used Hugging Face + PyTorch.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Cloud Resource Allocation with PSO (AI Project)</h3>
+        <p>Simulated dynamic cloud resource allocation using Particle Swarm Optimization. Visualized performance with a Flutter-based frontend.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Speech Recognition & Translation App</h3>
+        <p>Deployed on-device speech-to-text and translation models for Nepali–English. Used TFLite for fast, offline performance.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>AutoLead AI (Python + LangChain + n8n)</h3>
+        <p>LLM-based lead qualification agent that classifies and routes inbound messages using LangChain + OpenAI. Triggered automated actions in n8n (Airtable, email updates, CRM sync).</p>
+      </div>
+
+      <div class="project-card">
+        <h3>DocResponder (Python + FastAPI + RAG)</h3>
+        <p>An RAG-based AI service that answers support queries from documents. Combined FAISS vector search with LangChain and OpenAI for fast, relevant response generation.</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>Infrastructure Monitoring and Alerting System</h3>
+        <p>Built monitoring system using Prometheus, Grafana, and Alertmanager with extensive Linux command-line configuration. Deployed using Docker containers and Kubernetes with Helm. Created shell scripts for automated monitoring and alert management.</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>Smart Incident Router (n8n + Slack + PagerDuty)</h3>
+        <p>Automates alert intake from Prometheus/CloudWatch, deduplicates, and classifies severity with LLM. Enriches with runbook context and routes incidents to on‑call via Slack/PagerDuty, with auto‑escalation and Notion post‑mortem summaries.</p>
       </div>
     </div>
 
