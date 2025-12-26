@@ -1,614 +1,155 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Pranesh's Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <link rel="icon" type="image/png" href="images/education.png">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pranesh Pyara Shrestha</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/P.png">
+  <style>
+    :root { --text:#111; --muted:#666; --link:#0366d6; --border:#e5e5e5; }
+    html, body { background:#fff; color:var(--text); margin:0; padding:0; }
+    body { font: 16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
+    .container { max-width: 760px; padding: 0 20px; margin: 56px auto 88px; }
+    h1 { font-size: 32px; margin: 0 0 6px; font-weight: 700; letter-spacing: 0.2px; }
+    h2 { font-size: 20px; margin: 28px 0 8px; }
+    p { margin: 0 0 12px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin: 6px 0; }
+    .subtitle { color: var(--muted); margin-bottom: 14px; }
+    .muted { color: var(--muted); }
+    .section { margin-top: 24px; }
+    .links a { margin-right: 12px; white-space: nowrap; }
+    footer { margin-top: 36px; color: var(--muted); font-size: 14px; }
 
-<body class="is-preload">
-v
-    <!-- Wrapper -->
-    <div id="wrapper">
+    /* Language toggle */
+    .lang-toggle { display:flex; justify-content:flex-end; margin-top: 6px; }
+    .btn { display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:6px; color: var(--text); background:#fff; }
+    .btn:hover { background:#f7f7f7; text-decoration:none; }
 
-        <!-- Header -->
-        <header id="header">
-            <div class="logo">
-                <span class="icon fa-gem"></span>
-            </div>
-            <div class="content">
-                <div class="inner">
-                    <h1>{Pranesh Pyara Shrestha}</h1>
-                    <p>Electronics & Communication Engineer</p>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#expertise">My Expertise</a></li>
-		    <li><a href="https://blogs.praneshpyarashrestha.com.np/" target="blank">Blogs</a></li>
-                   
-                    <li><a href="#certs">Certifications</a></li>
-                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-                    <li><a href="#contact">Contact</a></li>
-		    <!-- <li><a href="https://drive.google.com/file/d/1Cryf7nhAusH3iNgqNXEZwVAawj1uRDTj/view?usp=drive_link" target="blank">Resume</a></li> -->
-		
+    /* CV helpers */
+    dl.timeline { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; row-gap: 10px; margin: 0; }
+    dl.timeline dt { color: var(--muted); font-weight: 600; }
+    dl.timeline dd { margin: 0; }
+    .role { font-weight: 600; }
+    .note { color: var(--muted); }
 
-                </ul>
-            </nav>
-        </header>
+    @media (max-width: 560px) {
+      dl.timeline { grid-template-columns: 1fr; }
+      dl.timeline dt { order: 1; }
+      dl.timeline dd { order: 2; }
+      .container { margin: 28px auto 56px; padding: 0 16px; }
+      body { font-size: 15px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 18px; }
+      .links a { margin-right: 8px; white-space: normal; display: inline-block; }
+      .lang-toggle { justify-content:flex-start; margin-top: 4px; }
+      .btn { padding:6px 12px; font-size:14px; }
+    }
 
-        <!-- Main -->
-        <div id="main">
-
-            <!-- Intro -->
-            <article id="intro">
-                <h2 class="major">Intro</h2>
-                <span class="image main"><img src="images/pranesh.jpg" alt="" /></span>
-				<p>
-					A recent graduate engineer from Pulchowk Campus, passionate about building and scaling technology that delivers real-world impact. My hands-on experience spans mobile development (Flutter, iOS, Android), DevOps practices, cloud infrastructure (AWS, Azure, DigitalOcean), and the exciting space of AI/ML and automation.
-				</p>
-
-				<p>
-					I thrive on connecting the dots; taking an idea and building it into something real that runs smoothly at scale. This has meant developing user-friendly mobile apps, setting up efficient CI/CD pipelines, automating critical workflows, and experimenting with AI-driven solutions to solve complex and repeatitive tasks.
-				</p>
-
-				<p>
-					I am always curious, always learning, and motivated by challenges that make life easier for people and businesses. If you’re working on something that blends technology, creativity, and impact, I’d love to connect and explore how we can build the future together.
-				</p>
-
-
+    /* Print-friendly tweaks */
+    @media print {
+      body { font-size: 12px; }
+      .links { display: none; }
+      a { text-decoration: underline; color: #000; }
+      footer { margin-top: 18px; }
+    }
+  </style>
+  <meta name="description" content="Pranesh Pyara Shrestha">
+  <meta name="robots" content="index,follow">
+</head> 
+<body>
+  <div class="container">
+    <div class="lang-toggle"><a class="btn" href="ne.html">नेपाली</a></div>
+    <h1>Er. Pranesh Pyara Shrestha</h1>
+    <div class="subtitle">Electronics, Communication & Information Engineer (NEC reg no: 95385)</div>
+    <p class="links">
+      <a href="mailto:mail@praneshpyarashrestha.com.np">Email</a>
+      <a href="https://github.com/praneshp1org" target="_blank">GitHub</a>
+      <a href="https://twitter.com/praneshp1org" target="_blank">Twitter</a>
+      <a href="https://blogs.praneshpyarashrestha.com.np/" target="_blank">Blog</a>
+      <a href="https://www.praneshpyarashrestha.com.np" target="_blank">Website</a>
+      <a href="https://www.youtube.com/@PraneshPyaraShrestha" target="_blank">YouTube</a>
     </p>
-<!--     <a href="https://drive.google.com/file/d/1Cryf7nhAusH3iNgqNXEZwVAawj1uRDTj/view?usp=drive_link", target="blank"></a><b>Resume</b> -->
-            </article>
+    <hr>
 
-<!-- Work -->
-<article id="education">
-    <h2 class="major">Education</h2>
-    <span class="image main"><img src="images/education.png" alt="Education Journey" /></span>
-    <div>
-        <ul>
-            <li>
-                <h3>Bachelor of Engineering</h3>
-                <p>
-                    Institute of Engineering, Pulchowk Campus <br> (2021 - 2025)  
-                    <br>
-                    
-                    <!-- <em>Specializing in software development and cloud computing, this program has been instrumental in shaping my technical expertise and problem-solving skills.</em> -->
-                </p>
-            </li>
-            <li>
-                <h3>High School / +2</h3>
-                <p>
-                    Dharan Secondary School <br> (2018 - 2021)  
-                    <br>
-                    <em>Focused on science and technology, laying the foundation for my engineering journey with a strong emphasis on mathematics and physics.</em>
-                </p>
-            </li>
-            <li>
-                <h3>Schooling</h3>
-                <p>
-                    Nepal Police School, Dharan <br> (2005 - 2018)  
-                    <br>
-                    <em>Where it all began—developed a passion for learning, teamwork, and problem-solving during these formative years.</em>
-                </p>
-            </li>
-        </ul>
-    </div>
-</article>
+    <p>
+      I like building practical software, AI systems, and infrastructure—from mobile apps to cloud automation—and keeping things minimal and fast. I enjoy shipping, iterating, and learning in public.
+    </p>
 
-<article id="certs">
-    <h2 class="major">Certifications</h2>
-    <!-- <span class="image main"><img src="images/certs.jpeg" alt="" /></span> -->
-    <div class="tech-stack-container">
-        <a href="https://www.credly.com/badges/9b940d43-58bf-40fe-8311-d303a27f68f4" target="_blank" class="tech-stack-link">
-          <div class="tech-stack-card">
-            <div class="tech-stack-icon">
-              <img src="images/cloud_architecting.png" alt="Amazon Web Services (AWS)">
-            </div>
-            <h3 class="tech-stack-title">AWS Academy: Cloud Architecting</h3>
-            <p class="tech-stack-description">Issued by Amazon Web Services Training and Certification</p>
-          </div>
-        </a>
-      </div>
-      <br>
+    <div class="section">
+      <h2>Work Experience</h2>
+      <dl class="timeline">
+        <dt>Oct 2025–Present</dt>
+        <dd>
+          <div class="role">AI Engineer</div>
+          <div class="place">Singapore Ecommerce App Pte. Ltd. · Full‑time</div>
+          <div class="note">Singapore · Remote</div>
+          <ul>
+            <li>Designed and implemented AI features and automations.</li>
+            <li>Integrated models into product workflows; supported evaluation and iteration.</li>
+          </ul>
+        </dd>
 
-      <div class="tech-stack-container">
-        <a href="https://www.credly.com/badges/be0b8d1a-b920-4930-9c06-38fb4da60a9c" target="_blank" class="tech-stack-link">
-          <div class="tech-stack-card">
-            <div class="tech-stack-icon">
-              <img src="images/cloud_foundations.png" alt="Amazon Web Services (AWS)">
-            </div>
-            <h3 class="tech-stack-title">AWS Academy: Cloud Foundations</h3>
-            <p class="tech-stack-description">Issued by Amazon Web Services Training and Certification.</p>
-          </div>
-        </a>
-      </div>
-
-      <br>
-
-      <div class="tech-stack-container">
-        <a href="https://codered.eccouncil.org/certificate/3ccb90c8-28a0-4091-90a0-fef886e5b0ae" target="_blank" class="tech-stack-link">
-          <div class="tech-stack-card">
-            <div class="tech-stack-icon">
-              <img src="images/logo-learning.webp" alt="Amazon Web Services (AWS)">
-            </div>
-            <h3 class="tech-stack-title">Network Defense Essentials</h3>
-            <p class="tech-stack-description">Issued by EC Council | Learning.</p>
-          </div>
-        </a>
-      </div>
-
-</article>
-
-<article id="portfolio">
-    <h2 class="major">Portfolio</h2>
-    <!-- <span class="image main"><img src="images/certs.jpeg" alt="" /></span> -->
-    <div class="tech-stack-container">
-        
-        <a href="https://www.credly.com/badges/9b940d43-58bf-40fe-8311-d303a27f68f4" target="_blank" class="tech-stack-link">
-          <div class="tech-stack-card1">
-            <div class="tech-stack-icon">
-              <img src="images/the_over.png" alt="Amazon Web Services (AWS)">
-            </div>
-            <h3 class="tech-stack-title1">The Over</h3>
-            <p class="tech-stack-description1">Mobile application(iOS and android) development of The Over App | Flutter</p>
-          </div>
-        </a>
-      </div>
-      <br>
-</article>
-
-            <!-- About -->
-            <article id="expertise">
-                <h2 class="major">My Expertise</h2>
-                <span class="image main"><img src="images/tech.jpg" alt="" /></span>
-                <div class="tech-stack-container">
-                    <div class="tech-stack-card">
-                      <div class="tech-stack-icon">
-                        <img src="images/aws_logo2.png" alt="Amazon Web Services (AWS)">
-                      </div>
-                      <h3 class="tech-stack-title">Amazon Web Services (AWS)</h3>
-                      <p class="tech-stack-description">Leveraging AWS cloud infrastructure to design scalable, secure, and resilient applications tailored to business needs.</p>
-                    </div>
-
-
-                    <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/terraform_logo.png" alt="IaC">
-                        </div>
-                        <h3 class="tech-stack-title">Infrastructure as Code (IaC)</h3>
-                        <p class="tech-stack-description">Automating infrastructure with Terraform and Terraform Cloud, enabling scalable and versioned environments.</p>
-                      </div>
-
-                      <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/Docker-Symbol.png" alt="IaC">
-                        </div>
-                        <h3 class="tech-stack-title">Containerization</h3>
-                        <p class="tech-stack-description">Leveraging containers for deploying mciroservice, enabling scalable and versioned environments.</p>
-                      </div>
-
-                      <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/kubernetes_logo.png" alt="IaC">
-                        </div>
-                        <h3 class="tech-stack-title">Kubernetes</h3>
-                        <p class="tech-stack-description">Managing containerized applications at scale using Kubernetes, ensuring efficient deployment and operation in production.</p>
-                      </div>
-                  
-                    <!-- Add more tech stack cards here -->
-                  </div>
-
-                  <br>
-                  <div class="tech-stack-container">
-                    <div class="tech-stack-card">
-                      <div class="tech-stack-icon">
-                        <img src="images/github_actions.png" alt="Amazon Web Services (AWS)">
-                      </div>
-                      <h3 class="tech-stack-title">CI/CD</h3>
-                      <p class="tech-stack-description">Implementing CI/CD pipelines to streamline automated code integration, testing, and deployment workflows.</p>
-                    </div>
-
-
-                    <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/flutter.png" alt="Flutter">
-                        </div>
-                        <h3 class="tech-stack-title">Flutter</h3>
-                        <p class="tech-stack-description">Development of cross-platform mobile apps(iOS/android) using Flutter</p>
-                      </div>
-                  
-                    <!-- Add more tech stack cards here -->
-                  </div>
-
-                  <br>
-
-
-                  <div class="tech-stack-container">
-                    <div class="tech-stack-card">
-                      <div class="tech-stack-icon">
-                        <img src="images/argocd_logo2.png" alt="Amazon Web Services (AWS)">
-                      </div>
-                      <h3 class="tech-stack-title">GitOps</h3>
-                      <p class="tech-stack-description">Enforcing GitOps practices using ArgoCD to ensure consistent and automated application deployment from version control.</p>
-                    </div>
-
-
-                    <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/lambda_logo.png" alt="Flutter">
-                        </div>
-                        <h3 class="tech-stack-title">Serverless</h3>
-                        <p class="tech-stack-description">Building event-driven, serverless architectures, reducing operational overhead while ensuring scalability.</p>
-                      </div>
-                  
-                    <!-- Add more tech stack cards here -->
-                  </div>
-
-
-                  <br>
-
-
-                  <div class="tech-stack-container">
-                    <div class="tech-stack-card">
-                      <div class="tech-stack-icon">
-                        <img src="images/security_hub_logo.png" alt="Amazon Web Services (AWS)">
-                      </div>
-                      <h3 class="tech-stack-title">Cloud Security</h3>
-                      <p class="tech-stack-description">Applying cloud security practices to ensure compliance, vulnerability management, and data protection.</p>
-                    </div>
-
-
-                    <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/disaster_recovery_logo.png" alt="Flutter">
-                        </div>
-                        <h3 class="tech-stack-title">Disaster Recovery</h3>
-                        <p class="tech-stack-description">Implementing disaster recovery strategies to minimize downtime and ensure business continuity during critical failures.</p>
-                      </div>
-                      <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/database_logo.png" alt="Flutter">
-                        </div>
-                        <h3 class="tech-stack-title">SQL/noSQL Database</h3>
-                        <p class="tech-stack-description">Managing database deployments, and ensuring high availability for both SQL and NoSQL databases in cloud environments.</p>
-                      </div>
-
-                      <div class="tech-stack-card">
-                        <div class="tech-stack-icon">
-                          <img src="images/python_logo.png" alt="Flutter">
-                        </div>
-                        <h3 class="tech-stack-title">SQL/noSQL Database</h3>
-                        <p class="tech-stack-description">Developing robust backend services and automation scripts with Python, ideal for scalable web apps and system integrations.
-
-                        </p>
-                      </div>
-                  
-                    <!-- Add more tech stack cards here -->
-                  </div>
-                <!-- <div>
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>
-                            Dart
-                        </li>
-                        <li>
-                            Java
-                        </li>
-                        <li>Javascript</li>
-                        <li>C/C++</li>
-                        <li>Python</li>
-
-
-                    </ul>
-                </div> -->
-            </article>
-
-            <!-- Contact -->
-            <article id="contact">
-                <h2 class="major">Contact</h2>
-                <span class="image main"><img src="images/contact.png" alt="" /></span>
-                <!-- <form method="post" action="#">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" />
-                        </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" />
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                        <li><input type="reset" value="Reset" /></li>
-                    </ul>
-                </form> -->
-                <ul class="icons">
-
-                    <li><a href="https://twitter.com/praneshp1org" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="https://www.facebook.com/praneshp1.org" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://www.instagram.com/praneshp1org/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="https://github.com/praneshp1org/" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-			<li><a href="https://www.youtube.com/@PraneshPyaraShrestha" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-                </ul>
-                <p>praneshpyara002@gmail.com</p>
-                <p>fb.com/praneshp1.org</p>
-                <p>www.praneshpyarashrestha.com.np</p>
-            </article>
-
-            <!-- Elements -->
-            <article id="elements">
-                <h2 class="major">Elements</h2>
-
-                <section>
-                    <h3 class="major">Text</h3>
-                    <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code:
-                        <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-                    <hr />
-                    <h2>Heading Level 2</h2>
-                    <h3>Heading Level 3</h3>
-                    <h4>Heading Level 4</h4>
-                    <h5>Heading Level 5</h5>
-                    <h6>Heading Level 6</h6>
-                    <hr />
-                    <h4>Blockquote</h4>
-                    <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum
-                        ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-                    <h4>Preformatted</h4>
-                    <pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-                </section>
-
-                <section>
-                    <h3 class="major">Lists</h3>
-
-                    <h4>Unordered</h4>
-                    <ul>
-                        <li>Dolor pulvinar etiam.</li>
-                        <li>Sagittis adipiscing.</li>
-                        <li>Felis enim feugiat.</li>
-                    </ul>
-
-                    <h4>Alternate</h4>
-                    <ul class="alt">
-                        <li>Dolor pulvinar etiam.</li>
-                        <li>Sagittis adipiscing.</li>
-                        <li>Felis enim feugiat.</li>
-                    </ul>
-
-                    <h4>Ordered</h4>
-                    <ol>
-                        <li>Dolor pulvinar etiam.</li>
-                        <li>Etiam vel felis viverra.</li>
-                        <li>Felis enim feugiat.</li>
-                        <li>Dolor pulvinar etiam.</li>
-                        <li>Etiam vel felis lorem.</li>
-                        <li>Felis enim et feugiat.</li>
-                    </ol>
-                    <h4>Icons</h4>
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                    </ul>
-
-                    <h4>Actions</h4>
-                    <ul class="actions">
-                        <li><a href="#" class="button primary">Default</a></li>
-                        <li><a href="#" class="button">Default</a></li>
-                    </ul>
-                    <ul class="actions stacked">
-                        <li><a href="#" class="button primary">Default</a></li>
-                        <li><a href="#" class="button">Default</a></li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3 class="major">Table</h3>
-                    <h4>Default</h4>
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Item One</td>
-                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                    <td>29.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Two</td>
-                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                    <td>19.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Three</td>
-                                    <td> Morbi faucibus arcu accumsan lorem.</td>
-                                    <td>29.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Four</td>
-                                    <td>Vitae integer tempus condimentum.</td>
-                                    <td>19.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Five</td>
-                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                    <td>29.99</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="2"></td>
-                                    <td>100.00</td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-
-                    <h4>Alternate</h4>
-                    <div class="table-wrapper">
-                        <table class="alt">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Item One</td>
-                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                    <td>29.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Two</td>
-                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                    <td>19.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Three</td>
-                                    <td> Morbi faucibus arcu accumsan lorem.</td>
-                                    <td>29.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Four</td>
-                                    <td>Vitae integer tempus condimentum.</td>
-                                    <td>19.99</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Five</td>
-                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                    <td>29.99</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="2"></td>
-                                    <td>100.00</td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 class="major">Buttons</h3>
-                    <ul class="actions">
-                        <li><a href="#" class="button primary">Primary</a></li>
-                        <li><a href="#" class="button">Default</a></li>
-                    </ul>
-                    <ul class="actions">
-                        <li><a href="#" class="button">Default</a></li>
-                        <li><a href="#" class="button small">Small</a></li>
-                    </ul>
-                    <ul class="actions">
-                        <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-                        <li><a href="#" class="button icon solid fa-download">Icon</a></li>
-                    </ul>
-                    <ul class="actions">
-                        <li><span class="button primary disabled">Disabled</span></li>
-                        <li><span class="button disabled">Disabled</span></li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3 class="major">Form</h3>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="demo-name">Name</label>
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-                            </div>
-                            <div class="field half">
-                                <label for="demo-email">Email</label>
-                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-                            </div>
-                            <div class="field">
-                                <label for="demo-category">Category</label>
-                                <select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-                            </div>
-                            <div class="field half">
-                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                <label for="demo-priority-low">Low</label>
-                            </div>
-                            <div class="field half">
-                                <input type="radio" id="demo-priority-high" name="demo-priority">
-                                <label for="demo-priority-high">High</label>
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="demo-copy" name="demo-copy">
-                                <label for="demo-copy">Email me a copy</label>
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                <label for="demo-human">Not a robot</label>
-                            </div>
-                            <div class="field">
-                                <label for="demo-message">Message</label>
-                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Reset" /></li>
-                        </ul>
-                    </form>
-                </section>
-
-            </article>
-
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <p class="copyright">&copy; Designed by: Pranesh Pyara Shrestha</p> <p class="copyright">&copy; Images: AI arts rendered using Midjourney AI.</p>
-        </footer>
-
+        <dt>May 2024–Jul 2025</dt>
+        <dd>
+          <div class="role">Software Engineer</div>
+          <div class="place">Algorithm Squad FZE · Full‑time</div>
+          <div class="note">Dubai, United Arab Emirates · Remote</div>
+        </dd>
+      </dl>
     </div>
 
-    <!-- BG -->
-    <div id="bg"></div>
+    <div class="section">
+      <h2>Education</h2>
+      <dl class="timeline">
+        <dt>2021–2025</dt>
+        <dd>
+          <div class="role">Bachelor of Engineering</div>
+          <div class="place">Institute of Engineering, Pulchowk Campus</div>
+          <div class="note">Aggregate Percentage: 84%</div>
+        </dd>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+        <dt>2018–2021</dt>
+        <dd>
+          <div class="role">High School / +2</div>
+          <div class="place">Dharan Secondary School</div>
+          <div class="note">CGPA: 3.82</div>
+          <div class="note">Science track with strong focus on mathematics and physics</div>
+        </dd>
 
+        <dt>2005–2018</dt>
+        <dd>
+          <div class="role">Schooling</div>
+          <div class="place">Nepal Police School, Dharan</div>
+          <div class="note">GPA: 3.80</div>
+          <div class="note">Formative years: teamwork, discipline, curiosity</div>
+        </dd>
+      </dl>
+    </div>
+
+    
+
+    <div class="section">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:mail@praneshpyarashrestha.com.np">mail@praneshpyarashrestha.com.np</a></li>
+        <li>GitHub: <a href="https://github.com/praneshp1org" target="_blank">@praneshp1org</a></li>
+        <li>Twitter: <a href="https://twitter.com/praneshp1org" target="_blank">@praneshp1org</a></li>
+        <li>YouTube: <a href="https://www.youtube.com/@PraneshPyaraShrestha" target="_blank">@PraneshPyaraShrestha</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/praneshp1org/" target="_blank">facebook.com/praneshp1org</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/praneshp1org/" target="_blank">instagram.com/praneshp1org</a></li>
+      </ul>
+    </div>
+
+    <footer>
+        <span class="muted">Updated Dec 26, 2025 · 
+          <img src="https://visitor-badge.laobi.icu/badge?page_id=praneshpyarashrestha.com.np" alt="Visitors" style="height:18px; vertical-align:middle;" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+          <span style="display:none;">Visitors counter unavailable</span>
+        </span>
+    </footer>
+    </div>
 </body>
-
 </html>
