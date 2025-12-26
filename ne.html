@@ -32,9 +32,9 @@
     dl.timeline dd { margin: 0; }
     .role { font-weight: 600; }
     .note { color: var(--muted); }
-    /* Experience cards (desktop) */
-    .experience-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
-    .experience-card .date { color: var(--muted); font-weight: 600; }
+    /* Entry cards (desktop) */
+    .experience-card, .education-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
+    .experience-card .date, .education-card .date { color: var(--muted); font-weight: 600; }
 
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
@@ -48,8 +48,8 @@
       .lang-toggle { justify-content:flex-start; margin-top: 4px; }
       .btn { padding:6px 12px; font-size:14px; }
       /* Mobile: stack cards */
-      .experience-card { grid-template-columns: 1fr; }
-      .experience-card .date { font-size: 12px; margin: 0 0 6px; }
+      .experience-card, .education-card { grid-template-columns: 1fr; }
+      .experience-card .date, .education-card .date { font-size: 12px; margin: 0 0 6px; }
     }
 
     @media print {
@@ -108,30 +108,34 @@
 
     <div class="section">
       <h2>शिक्षा</h2>
-      <dl class="timeline">
-        <dt>२०२१–२०२५</dt>
-        <dd>
+      <div class="education-card">
+        <div class="date">२०२१–२०२५</div>
+        <div>
           <div class="role">इन्जिनियरिङ स्नातक</div>
           <div class="place">इन्जिनियरिङ अध्यान संस्थान, पुल्चोक इन्जिनियरिङ क्याम्पस</div>
           <div class="note">समग्र प्रतिशत: ८४%</div>
-        </dd>
+        </div>
+      </div>
 
-        <dt>२०१८–२०२१</dt>
-        <dd>
+      <div class="education-card">
+        <div class="date">२०१८–२०२१</div>
+        <div>
           <div class="role">उच्च विद्यालय / +२</div>
           <div class="place">धरान माध्यमिक विद्यालय</div>
           <div class="note">सीजिपिए: ३.८२</div>
           <div class="note">विज्ञान धार — गणित र भौतिकशास्त्रमा जोड</div>
-        </dd>
+        </div>
+      </div>
 
-        <dt>२००५–२०१८</dt>
-        <dd>
+      <div class="education-card">
+        <div class="date">२००५–२०१८</div>
+        <div>
           <div class="role">विद्यालय स्तर</div>
           <div class="place">नेपाल प्रहरी विद्यालय, धरान</div>
           <div class="note">जिपिए: ३.८०</div>
           <div class="note">आधार वर्षहरू: टोलीकार्य, अनुशासन, जिज्ञासा</div>
-        </dd>
-      </dl>
+        </div>
+      </div>
     </div>
 
     <div class="section">

@@ -35,9 +35,9 @@
     dl.timeline dd { margin: 0; }
     .role { font-weight: 600; }
     .note { color: var(--muted); }
-    /* Experience cards (desktop) */
-    .experience-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
-    .experience-card .date { color: var(--muted); font-weight: 600; }
+    /* Entry cards (desktop) */
+    .experience-card, .education-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
+    .experience-card .date, .education-card .date { color: var(--muted); font-weight: 600; }
 
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
@@ -51,8 +51,8 @@
       .lang-toggle { justify-content:flex-start; margin-top: 4px; }
       .btn { padding:6px 12px; font-size:14px; }
       /* Mobile: stack cards */
-      .experience-card { grid-template-columns: 1fr; }
-      .experience-card .date { font-size: 12px; margin: 0 0 6px; }
+      .experience-card, .education-card { grid-template-columns: 1fr; }
+      .experience-card .date, .education-card .date { font-size: 12px; margin: 0 0 6px; }
     }
 
     /* Print-friendly tweaks */
@@ -112,30 +112,34 @@
 
     <div class="section">
       <h2>Education</h2>
-      <dl class="timeline">
-        <dt>2021–2025</dt>
-        <dd>
+      <div class="education-card">
+        <div class="date">2021–2025</div>
+        <div>
           <div class="role">Bachelor of Engineering</div>
           <div class="place">Institute of Engineering, Pulchowk Campus</div>
           <div class="note">Aggregate Percentage: 84%</div>
-        </dd>
+        </div>
+      </div>
 
-        <dt>2018–2021</dt>
-        <dd>
+      <div class="education-card">
+        <div class="date">2018–2021</div>
+        <div>
           <div class="role">High School / +2</div>
           <div class="place">Dharan Secondary School</div>
           <div class="note">CGPA: 3.82</div>
           <div class="note">Science track with strong focus on mathematics and physics</div>
-        </dd>
+        </div>
+      </div>
 
-        <dt>2005–2018</dt>
-        <dd>
+      <div class="education-card">
+        <div class="date">2005–2018</div>
+        <div>
           <div class="role">Schooling</div>
           <div class="place">Nepal Police School, Dharan</div>
           <div class="note">GPA: 3.80</div>
           <div class="note">Formative years: teamwork, discipline, curiosity</div>
-        </dd>
-      </dl>
+        </div>
+      </div>
     </div>
 
     
