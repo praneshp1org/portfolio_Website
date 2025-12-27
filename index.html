@@ -16,6 +16,9 @@
     h1 { font-size: 32px; margin: 0 0 6px; font-weight: 700; letter-spacing: 0.2px; }
     h2 { font-size: 20px; margin: 28px 0 8px; }
     p { margin: 0 0 12px; }
+    .header-with-photo { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; }
+    .profile-photo { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .header-text { flex: 1; }
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
     hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
@@ -55,6 +58,8 @@
       body { font-size: 15px; }
       h1 { font-size: 26px; }
       h2 { font-size: 18px; }
+      .header-with-photo { gap: 14px; }
+      .profile-photo { width: 72px; height: 72px; }
       .links a { margin-right: 8px; white-space: normal; display: inline-block; }
       .lang-toggle { justify-content:flex-start; margin-top: 4px; }
       .btn { padding:6px 12px; font-size:14px; }
@@ -131,8 +136,13 @@
 <body>
   <div class="container">
     <div class="lang-toggle"><a class="btn" href="ne.html" rel="alternate" hreflang="ne" aria-label="Switch to Nepali">नेपाली</a></div>
-    <h1>Er. Pranesh Pyara Shrestha</h1>
-    <div class="subtitle">Electronics, Communication & Information Engineer (NEC reg no: 95385)</div>
+    <div class="header-with-photo">
+      <img src="images/dp.jpg" alt="Pranesh Pyara Shrestha" class="profile-photo">
+      <div class="header-text">
+        <h1>Er. Pranesh Pyara Shrestha</h1>
+        <div class="subtitle">Electronics, Communication & Information Engineer (NEC reg no: 95385)</div>
+      </div>
+    </div>
     <p class="links">
       <a href="mailto:mail@praneshpyarashrestha.com.np">Email</a>
       <a href="https://github.com/praneshp1org" target="_blank" rel="noopener noreferrer">GitHub</a>
