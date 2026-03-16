@@ -47,6 +47,12 @@
     .project-card h3 { font-size: 18px; margin: 0 0 8px; font-weight: 600; }
     .project-card p { margin: 0; color: var(--text); line-height: 1.5; }
 
+    /* Certifications section */
+    .cert-card { display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; background: #fff; }
+    .cert-badge { font-size: 22px; flex-shrink: 0; line-height: 1; }
+    .cert-title { font-weight: 600; margin: 0 0 2px; }
+    .cert-issuer { color: var(--muted); font-size: 14px; margin: 0; }
+
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
       dl.timeline dt { order: 1; }
@@ -212,6 +218,24 @@
     </div>
 
     <div class="section">
+      <h2>प्रमाणपत्रहरू</h2>
+
+      <div class="cert-card">
+        <div>
+          <p class="cert-title">श्रेणी &#39;क&#39; सामान्य दर्ता इन्जिनियर</p>
+          <p class="cert-issuer">नेपाल इन्जिनियरिङ परिषद् (NEC दर्ता नं. 95385)</p>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div>
+          <p class="cert-title">AWS Certified Solutions Architect – Associate</p>
+          <p class="cert-issuer">Amazon Web Services (AWS)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
       <h2>सम्पन्न/काम गरिएका परियोजनाहरू</h2>
 
       <div class="project-card">
@@ -276,6 +300,17 @@
       <div class="project-card">
         <h3>स्मार्ट इन्सिडेन्ट राउटर (n8n + Slack + PagerDuty)</h3>
         <p>Prometheus/CloudWatch बाट आएका अलर्टहरू नक्कली दोहोरिएको छुट्याई (dedup), LLM प्रयोग गरी गम्भीरता वर्गीकरण, र रनबुक सन्दर्भले समृद्ध गरिन्छ। Slack/PagerDuty मार्फत अन‑कॉल टोलीमा पठाउने, स्वतः‑उच्चिकरण (auto‑escalation) र Notion मा पोस्ट‑मोर्टेम सारांश लेख्ने अटोमेसन।</p>
+      </div>
+
+      <div class="project-card">
+        <h3>IOE प्रवेश परीक्षा तयारी प्लेटफर्म</h3>
+        <p>IOE (इन्स्टिच्युट अफ इन्जिनियरिङ) प्रवेश परीक्षाका उम्मेदवारहरूका लागि पूर्ण-फिचर्ड अनलाइन परीक्षा तयारी प्लेटफर्म, जसमा एडमिन र विद्यार्थीका लागि भूमिका-आधारित पहुँच छ।</p>
+        <ul>
+          <li><strong>भूमिका-आधारित लगइन:</strong> एडमिन र विद्यार्थीका लागि अलग-अलग सुरक्षित ड्यासबोर्ड</li>
+          <li><strong>एडमिन नियन्त्रण:</strong> प्रश्नहरू सिर्जना र व्यवस्थापन गर्ने, परीक्षा समयतालिका तथा सक्रिय/निष्क्रिय गर्ने, र विद्यार्थी खाता登録 गर्ने</li>
+          <li><strong>विद्यार्थी सुविधाहरू:</strong> जुनसुकै बेला अभ्यास परीक्षा दिने, सबमिट गरेपछि तत्काल नतिजा हेर्ने, र आफ्नो अंकका आधारमा रैंक भविष्यवाणी हेर्ने</li>
+          <li><strong>नक्कल-निवारण:</strong> प्रत्येक प्रयासमा प्रश्न र उत्तरका विकल्पहरू अनियमित रूपमा फेरबदल हुन्छन्</li>
+        </ul>
       </div>
     </div>
 

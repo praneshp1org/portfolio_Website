@@ -50,6 +50,12 @@
     .project-card h3 { font-size: 18px; margin: 0 0 8px; font-weight: 600; }
     .project-card p { margin: 0; color: var(--text); line-height: 1.5; }
 
+    /* Certifications section */
+    .cert-card { display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; background: #fff; }
+    .cert-badge { font-size: 22px; flex-shrink: 0; line-height: 1; }
+    .cert-title { font-weight: 600; margin: 0 0 2px; }
+    .cert-issuer { color: var(--muted); font-size: 14px; margin: 0; }
+
     @media (max-width: 560px) {
       dl.timeline { grid-template-columns: 1fr; }
       dl.timeline dt { order: 1; }
@@ -214,6 +220,24 @@
     </div>
 
     <div class="section">
+      <h2>Certifications</h2>
+
+      <div class="cert-card">
+        <div>
+          <p class="cert-title">Category &#39;A&#39; General Registered Engineer</p>
+          <p class="cert-issuer">Nepal Engineering Council (NEC Reg. No. 95385)</p>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div>
+          <p class="cert-title">AWS Certified Solutions Architect – Associate</p>
+          <p class="cert-issuer">Amazon Web Services (AWS)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
       <h2>Projects Delivered/Worked On</h2>
       
       <div class="project-card">
@@ -278,6 +302,17 @@
       <div class="project-card">
         <h3>Smart Incident Router (n8n + Slack + PagerDuty)</h3>
         <p>Automates alert intake from Prometheus/CloudWatch, deduplicates, and classifies severity with LLM. Enriches with runbook context and routes incidents to on‑call via Slack/PagerDuty, with auto‑escalation and Notion post‑mortem summaries.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>IOE Entrance Preparation Platform</h3>
+        <p>A full-featured exam preparation web platform for IOE (Institute of Engineering) entrance aspirants, with role-based access for admins and students.</p>
+        <ul>
+          <li><strong>Role-based login:</strong> separate admin and student dashboards with secure authentication</li>
+          <li><strong>Admin controls:</strong> create and manage questions, schedule and publish/disable exams, and register student accounts</li>
+          <li><strong>Student features:</strong> practice exams anytime, get instant results after submission, and view rank predictions based on score relative to all participants</li>
+          <li><strong>Anti-cheating:</strong> questions and answer options are shuffled randomly for each attempt, eliminating positional memorization</li>
+        </ul>
       </div>
     </div>
 
