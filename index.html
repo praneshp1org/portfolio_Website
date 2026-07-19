@@ -80,21 +80,19 @@
     .nav-inner {
       max-width: 960px; margin: 0 auto;
       padding: 0 32px;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: center;
       height: 56px;
     }
     .nav-left { display: flex; align-items: center; gap: 12px; }
     .nav-logo {
-      width: 32px; height: 32px;
-      border-radius: 8px;
-      background: var(--fg);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--bg); font-weight: 700; font-size: 14px;
-      letter-spacing: -.5px;
+      font-size: 12px; font-weight: 600;
+      color: var(--fg2);
+      letter-spacing: .01em;
       text-decoration: none;
-      transition: transform .2s, box-shadow .2s;
+      transition: color .2s;
+      white-space: nowrap;
     }
-    .nav-logo:hover { transform: scale(1.05); box-shadow: 0 4px 20px var(--glow); color: #fff; }
+    .nav-logo:hover { color: var(--fg); }
     .nav-links { display: flex; align-items: center; gap: 24px; }
     .nav-links a {
       font-size: 13px; color: var(--fg3); font-weight: 500;
@@ -455,9 +453,6 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <div class="nav-left">
-        <a class="nav-logo" href="#">P</a>
-      </div>
       <div class="nav-links">
         <a href="#experience" class="nav-hide">Experience</a>
         <a href="#education" class="nav-hide">Education</a>
