@@ -3,115 +3,436 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Er. Pranesh Pyara Shrestha — Electronics, Communication & Information Engineer</title>
+  <title>Pranesh Pyara Shrestha</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/P.png">
   <link rel="canonical" href="https://www.praneshpyarashrestha.com.np/index.html">
   <link rel="alternate" hreflang="en" href="https://www.praneshpyarashrestha.com.np/index.html">
   <link rel="alternate" hreflang="ne" href="https://www.praneshpyarashrestha.com.np/ne.html">
   <style>
-    :root { --text:#111; --muted:#666; --link:#0366d6; --border:#e5e5e5; }
-    html, body { background:#fff; color:var(--text); margin:0; padding:0; }
-    body { font: 16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
-    .container { max-width: 760px; padding: 0 20px; margin: 56px auto 88px; }
-    h1 { font-size: 32px; margin: 0 0 6px; font-weight: 700; letter-spacing: 0.2px; }
-    h2 { font-size: 20px; margin: 28px 0 8px; }
-    p { margin: 0 0 12px; }
-    .header-with-photo { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; }
-    .profile-photo { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-    .header-text { flex: 1; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
-    ul { margin: 0; padding-left: 20px; }
-    li { margin: 6px 0; }
-    .subtitle { color: var(--muted); margin-bottom: 14px; }
-    .muted { color: var(--muted); }
-    .section { margin-top: 24px; }
-    .links a { margin-right: 12px; white-space: nowrap; }
-    footer { margin-top: 36px; color: var(--muted); font-size: 14px; }
-
-    /* Language toggle */
-    .lang-toggle { display:flex; justify-content:flex-end; margin-top: 6px; }
-    .btn { display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:6px; color: var(--text); background:#fff; }
-    .btn:hover { background:#f7f7f7; text-decoration:none; }
-
-    /* CV helpers */
-    dl.timeline { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; row-gap: 10px; margin: 0; }
-    dl.timeline dt { color: var(--muted); font-weight: 600; }
-    dl.timeline dd { margin: 0; }
-    .role { font-weight: 600; }
-    .note { color: var(--muted); }
-    /* Entry cards (desktop) */
-    .experience-card, .education-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 18px; align-items: start; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; background:#fff; }
-    .experience-card .date, .education-card .date { color: var(--muted); font-weight: 600; }
-    
-    /* Projects section */
-    .project-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 16px; background:#fff; }
-    .project-card h3 { font-size: 18px; margin: 0 0 8px; font-weight: 600; }
-    .project-card p { margin: 0; color: var(--text); line-height: 1.5; }
-
-    /* Certifications section */
-    .cert-card { display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; background: #fff; }
-    .cert-badge { font-size: 22px; flex-shrink: 0; line-height: 1; }
-    .cert-title { font-weight: 600; margin: 0 0 2px; }
-    .cert-issuer { color: var(--muted); font-size: 14px; margin: 0; }
-
-    @media (max-width: 560px) {
-      dl.timeline { grid-template-columns: 1fr; }
-      dl.timeline dt { order: 1; }
-      dl.timeline dd { order: 2; }
-      .container { margin: 28px auto 56px; padding: 0 16px; }
-      body { font-size: 15px; }
-      h1 { font-size: 26px; }
-      h2 { font-size: 18px; }
-      .header-with-photo { gap: 14px; }
-      .profile-photo { width: 72px; height: 72px; }
-      .links a { margin-right: 8px; white-space: normal; display: inline-block; }
-      .lang-toggle { justify-content:flex-start; margin-top: 4px; }
-      .btn { padding:6px 12px; font-size:14px; }
-      /* Mobile: stack cards */
-      .experience-card, .education-card { grid-template-columns: 1fr; }
-      .experience-card .date, .education-card .date { font-size: 12px; margin: 0 0 6px; }
-      .project-card { padding: 14px; }
-      .project-card h3 { font-size: 16px; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-16px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .4; }
     }
 
-    /* Print-friendly tweaks */
+    :root {
+      --bg: #f5f0eb;
+      --bg2: #ebe4dc;
+      --fg: #1a1714;
+      --fg2: #5c564e;
+      --fg3: #9a928a;
+      --accent: #1a1714;
+      --accent2: #3a3530;
+      --card: #eee9e2;
+      --card-border: rgba(0,0,0,.08);
+      --tag-bg: rgba(0,0,0,.05);
+      --tag-fg: #5c564e;
+      --glow: rgba(0,0,0,.04);
+      --timeline: #d4ccc4;
+    }
+    .dark {
+      --bg: #0e0d0c;
+      --bg2: #1a1918;
+      --fg: #e8e4df;
+      --fg2: #a09890;
+      --fg3: #5e5850;
+      --accent: #e8e4df;
+      --accent2: #fff;
+      --card: #161514;
+      --card-border: rgba(255,255,255,.08);
+      --tag-bg: rgba(255,255,255,.06);
+      --tag-fg: #a09890;
+      --glow: rgba(255,255,255,.04);
+      --timeline: #2a2826;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      transition: background .4s, color .4s;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--accent2); }
+
+    /* ═══ NAV ═══ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: color-mix(in srgb, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-inner {
+      max-width: 960px; margin: 0 auto;
+      padding: 0 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .nav-left { display: flex; align-items: center; gap: 12px; }
+    .nav-logo {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: var(--fg);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--bg); font-weight: 700; font-size: 14px;
+      letter-spacing: -.5px;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .nav-logo:hover { transform: scale(1.05); box-shadow: 0 4px 20px var(--glow); color: #fff; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a {
+      font-size: 13px; color: var(--fg3); font-weight: 500;
+      letter-spacing: .01em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--fg); }
+    .nav-lang {
+      font-size: 12px; color: var(--fg3);
+      padding: 4px 10px;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      transition: all .2s;
+    }
+    .nav-lang:hover { color: var(--fg); border-color: var(--fg3); }
+    #themeBtn {
+      background: none; border: 1px solid var(--card-border);
+      border-radius: 6px;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--fg3);
+      font-size: 14px;
+      transition: all .2s;
+    }
+    #themeBtn:hover { color: var(--fg); border-color: var(--fg3); }
+
+    /* ═══ MAIN ═══ */
+    main { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      padding: 120px 0 80px;
+      position: relative;
+    }
+    .hero-status {
+      font-size: 13px; font-weight: 500;
+      color: var(--fg2);
+      margin-bottom: 24px;
+      animation: fadeUp .6s ease both;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 8px;
+      animation: fadeUp .6s ease .1s both;
+    }
+    .hero-ne {
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--fg3);
+      font-weight: 400;
+      letter-spacing: -.5px;
+      margin-bottom: 32px;
+      animation: fadeUp .6s ease .2s both;
+    }
+    .hero-intro {
+      font-size: 18px;
+      color: var(--fg2);
+      max-width: 560px;
+      line-height: 1.7;
+      animation: fadeUp .6s ease .3s both;
+    }
+    .hero-intro strong { color: var(--fg); font-weight: 600; }
+    .hero-links {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 32px;
+      animation: fadeUp .6s ease .4s both;
+    }
+    .hero-links a {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 500;
+      color: var(--fg2);
+      padding: 8px 16px;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      transition: all .2s;
+    }
+    .hero-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--glow);
+      transform: translateY(-1px);
+    }
+    .hero-links a .arrow { transition: transform .2s; }
+    .hero-links a:hover .arrow { transform: translateX(2px); }
+
+    /* ═══ SECTION ═══ */
+    .section {
+      padding: 64px 0;
+      border-top: 1px solid var(--card-border);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .section-label {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--fg3);
+    }
+    .section-num {
+      font-size: 11px; font-weight: 600;
+      color: var(--fg3);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ═══ EXPERIENCE TIMELINE ═══ */
+    .timeline { position: relative; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 1px;
+      background: var(--timeline);
+    }
+    .tl-item {
+      position: relative;
+      padding-left: 36px;
+      padding-bottom: 48px;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -4px; top: 8px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--timeline);
+      transition: all .3s;
+    }
+    .tl-item:first-child::before {
+      border-color: var(--accent);
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--glow);
+    }
+    .tl-item:hover::before {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+    .tl-dates {
+      font-size: 12px; font-weight: 600; color: var(--fg3);
+      letter-spacing: .04em;
+      margin-bottom: 6px;
+    }
+    .tl-role {
+      font-size: 20px; font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -.3px;
+      margin-bottom: 4px;
+    }
+    .tl-org {
+      font-size: 14px; color: var(--fg2);
+      margin-bottom: 4px;
+    }
+    .tl-meta {
+      font-size: 12px; color: var(--fg3);
+      margin-bottom: 12px;
+    }
+    .tl-desc {
+      font-size: 14px; color: var(--fg2); line-height: 1.7;
+    }
+    .tl-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-top: 12px;
+    }
+    .tag {
+      font-size: 11px; font-weight: 600;
+      padding: 4px 10px;
+      background: var(--tag-bg);
+      color: var(--tag-fg);
+      border-radius: 4px;
+      letter-spacing: .02em;
+    }
+
+    /* ═══ EDUCATION CARDS ═══ */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .edu-card {
+      padding: 24px;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      background: var(--card);
+      transition: all .3s;
+    }
+    .edu-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px var(--glow);
+      transform: translateY(-2px);
+    }
+    .edu-year {
+      font-size: 12px; font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .edu-degree {
+      font-size: 16px; font-weight: 700;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .edu-school {
+      font-size: 13px; color: var(--fg2);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .edu-detail {
+      font-size: 12px; color: var(--fg3);
+    }
+
+    /* ═══ CONNECT ═══ */
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .connect-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      background: var(--card);
+      transition: all .2s;
+      color: var(--fg);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .connect-item:hover {
+      border-color: var(--accent);
+      background: var(--glow);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .connect-item .connect-arrow {
+      font-size: 14px;
+      color: var(--fg3);
+      transition: all .2s;
+    }
+    .connect-item:hover .connect-arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 32px 0 48px;
+      margin-top: 32px;
+    }
+    .footer-inner {
+      max-width: 960px; margin: 0 auto; padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-left {
+      font-size: 12px; color: var(--fg3);
+    }
+    .footer-right {
+      font-size: 12px; color: var(--fg3);
+      display: flex; gap: 16px;
+    }
+    .footer-right a { color: var(--fg3); }
+    .footer-right a:hover { color: var(--accent); }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 640px) {
+      .nav-inner { padding: 0 20px; }
+      main { padding: 0 20px; }
+      .footer-inner { padding: 0 20px; }
+      .nav-links a.nav-hide { display: none; }
+      .hero { padding: 100px 0 60px; }
+      .hero h1 { letter-spacing: -1px; }
+      .section { padding: 48px 0; }
+      .timeline::before { display: none; }
+      .tl-item { padding-left: 0; padding-bottom: 40px; }
+      .tl-item::before { display: none; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .connect-grid { grid-template-columns: 1fr; }
+    }
+
     @media print {
-      body { font-size: 12px; }
-      .links { display: none; }
-      a { text-decoration: underline; color: #000; }
-      footer { margin-top: 18px; }
+      nav, #themeBtn { display: none; }
+      .hero { padding: 24px 0; }
+      .section { padding: 24px 0; }
+    }
+
+    /* ═══ SCROLL ANIMATIONS ═══ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
-  <meta name="description" content="Er. Pranesh Pyara Shrestha (Electronics, Communication & Information Engineer). Building software, AI systems, and cloud automation. Remote experience in Singapore and Dubai.">
+  <meta name="description" content="Pranesh Pyara Shrestha — Electronics, Communication & Information Engineer. Government of Nepal.">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Pranesh Pyara Shrestha">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Pranesh Pyara Shrestha">
-  <meta property="og:title" content="Er. Pranesh Pyara Shrestha — Electronics, Communication & Information Engineer">
-  <meta property="og:description" content="Building practical software, AI systems, and cloud automation.">
+  <meta property="og:title" content="Pranesh Pyara Shrestha — Electronics Engineer">
+  <meta property="og:description" content="Electronics, Communication & Information Engineer — Government of Nepal.">
   <meta property="og:url" content="https://www.praneshpyarashrestha.com.np/index.html">
-  <meta property="og:image" content="https://www.praneshpyarashrestha.com.np/images/P.png">
-  <meta property="og:image:alt" content="Pranesh logo">
+  <meta property="og:image" content="https://www.praneshpyarashrestha.com.np/images/dp.jpg">
+  <meta property="og:image:alt" content="Pranesh Pyara Shrestha">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@praneshp1org">
-  <meta name="twitter:title" content="Er. Pranesh Pyara Shrestha">
-  <meta name="twitter:description" content="Electronics, Communication & Information Engineer — software/AI/cloud.">
-  <meta name="twitter:image" content="https://www.praneshpyarashrestha.com.np/images/P.png">
+  <meta name="twitter:title" content="Pranesh Pyara Shrestha">
+  <meta name="twitter:description" content="Electronics, Communication & Information Engineer — Government of Nepal.">
+  <meta name="twitter:image" content="https://www.praneshpyarashrestha.com.np/images/dp.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Pranesh Pyara Shrestha",
     "url": "https://www.praneshpyarashrestha.com.np/index.html",
-    "image": "https://www.praneshpyarashrestha.com.np/images/P.png",
+    "image": "https://www.praneshpyarashrestha.com.np/images/dp.jpg",
     "email": "mailto:mail@praneshpyarashrestha.com.np",
-    "jobTitle": "Electronics, Communication and Information Engineer",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Singapore Ecommerce App Pte. Ltd."
+    "jobTitle": "Electronics Engineer",
+    "worksFor": {
+      "@type": "GovernmentOrganization",
+      "name": "Government of Nepal"
     },
     "sameAs": [
       "https://github.com/praneshp1org",
@@ -124,218 +445,215 @@
       "https://www.praneshpyarashrestha.com.np"
     ],
     "alumniOf": [
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Institute of Engineering, Pulchowk Campus"
-      },
-      {
-        "@type": "HighSchool",
-        "name": "Dharan Secondary School"
-      },
-      {
-        "@type": "School",
-        "name": "Nepal Police School, Dharan"
-      }
+      { "@type": "CollegeOrUniversity", "name": "Institute of Engineering, Pulchowk Campus" },
+      { "@type": "HighSchool", "name": "Dharan Secondary School" },
+      { "@type": "School", "name": "Nepal Police School, Dharan" }
     ]
   }
   </script>
-</head> 
+</head>
 <body>
-  <div class="container">
-    <div class="lang-toggle"><a class="btn" href="ne.html" rel="alternate" hreflang="ne" aria-label="Switch to Nepali">नेपाली</a></div>
-    <div>
-      <h1>Er. Pranesh Pyara Shrestha</h1>
-      <div class="subtitle">Electronics, Communication & Information Engineer (NEC reg no: 95385)</div>
-    </div>
-    <p class="links">
-      <a href="mailto:mail@praneshpyarashrestha.com.np">Email</a>
-      <a href="https://github.com/praneshp1org" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/praneshp1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://twitter.com/praneshp1org" target="_blank" rel="noopener noreferrer">Twitter</a>
-      <a href="https://blogs.praneshpyarashrestha.com.np/" target="_blank" rel="noopener noreferrer">Blog</a>
-      <a href="https://www.praneshpyarashrestha.com.np" target="_blank" rel="noopener noreferrer">Website</a>
-      <a href="https://www.youtube.com/@PraneshPyaraShrestha" target="_blank" rel="noopener noreferrer">YouTube</a>
-    </p>
-    <hr>
-
-    <p>
-      I like building practical software, AI systems, and infrastructure—from mobile apps to cloud automation—and keeping things minimal and fast. I enjoy shipping, iterating, and learning in public.
-    </p>
-
-    <div class="section">
-      <h2>Work Experience</h2>
-      <div class="experience-card">
-        <div class="date">Oct 2025–Present</div>
-        <div>
-          <div class="role">AI Engineer</div>
-          <div class="place">Singapore Ecommerce App Pte. Ltd. · Full‑time</div>
-          <div class="note">Singapore · Remote</div>
-          <ul>
-            <li>Designed and implemented AI features and automations.</li>
-            <li>Integrated models into product workflows; supported evaluation and iteration.</li>
-          </ul>
-        </div>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a class="nav-logo" href="#">P</a>
       </div>
-
-      <div class="experience-card">
-        <div class="date">May 2024–Jul 2025</div>
-        <div>
-          <div class="role">Software Engineer</div>
-          <div class="place">Algorithm Squad FZE · Full‑time</div>
-          <div class="note">Dubai, United Arab Emirates · Remote</div>
-        </div>
+      <div class="nav-links">
+        <a href="#experience" class="nav-hide">Experience</a>
+        <a href="#education" class="nav-hide">Education</a>
+        <a href="#connect">Connect</a>
+        <a href="ne.html" class="nav-lang" hreflang="ne">ने</a>
+        <button id="themeBtn" aria-label="Toggle theme">☀</button>
       </div>
     </div>
+  </nav>
 
-    <div class="section">
-      <h2>Education</h2>
-      <div class="education-card">
-        <div class="date">2021–2025</div>
-        <div>
-          <div class="role">Bachelor of Engineering</div>
-          <div class="place">Institute of Engineering, Pulchowk Campus</div>
-          <div class="note">Aggregate Percentage: 84%</div>
+  <main>
+    <section class="hero">
+      <div class="hero-status">Electronics Engineer, Government of Nepal</div>
+      <h1>Er. Pranesh Pyara<br>Shrestha</h1>
+      <div class="hero-ne">प्रनेश प्यारा श्रेष्ठ</div>
+      <p class="hero-intro">
+        Electronics Engineer at the <strong>Ministry of Information & Communication</strong>, working on spectrum regulation, telecommunications infrastructure, and IT systems for the Government of Nepal.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:mail@praneshpyarashrestha.com.np">Email <span class="arrow">&rarr;</span></a>
+        <a href="https://github.com/praneshp1org" target="_blank" rel="noopener">GitHub <span class="arrow">&rarr;</span></a>
+        <a href="https://www.linkedin.com/in/praneshp1/" target="_blank" rel="noopener">LinkedIn <span class="arrow">&rarr;</span></a>
+        <a href="https://blogs.praneshpyarashrestha.com.np/" target="_blank" rel="noopener">Blog <span class="arrow">&rarr;</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-header">
+        <span class="section-label">Experience</span>
+        <span class="section-num">01</span>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dates">Jul 2026 &mdash; Present</div>
+          <div class="tl-role">Electronics Engineer</div>
+          <div class="tl-org">Government of Nepal</div>
+          <div class="tl-meta">Gazetted Class III Officer &middot; NEC 95385</div>
+          <p class="tl-desc">
+            Frequency and spectrum management, electronics systems design,
+            and infrastructure development for national-level projects.
+          </p>
+          <div class="tl-tags">
+            <span class="tag">Spectrum Management</span>
+            <span class="tag">Electronics Systems</span>
+            <span class="tag">Infrastructure</span>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dates">Oct 2025 &mdash; Jul 2026</div>
+          <div class="tl-role">AI Engineer</div>
+          <div class="tl-org">Singapore Ecommerce App Pte. Ltd.</div>
+          <div class="tl-meta">Singapore &middot; Remote</div>
+          <p class="tl-desc">
+            Built internal AI tools and automation pipelines. Developed LLM-based
+            workflow orchestration and contributed to .NET backend systems.
+          </p>
+          <div class="tl-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">n8n</span>
+            <span class="tag">.NET</span>
+            <span class="tag">C#</span>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dates">May 2024 &mdash; Jul 2025</div>
+          <div class="tl-role">Software Engineer</div>
+          <div class="tl-org">Algorithm Squad FZE</div>
+          <div class="tl-meta">Dubai, UAE &middot; Remote</div>
+          <p class="tl-desc">
+            Cross-platform app development targeting iOS, Android, and Web
+            from a shared codebase. Feature development through production optimization.
+          </p>
+          <div class="tl-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Dart</span>
+            <span class="tag">iOS</span>
+            <span class="tag">Android</span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="education-card">
-        <div class="date">2018–2021</div>
-        <div>
-          <div class="role">High School / +2</div>
-          <div class="place">Dharan Secondary School</div>
-          <div class="note">CGPA: 3.82</div>
-          <div class="note">Science track with strong focus on mathematics and physics</div>
+    <section class="section" id="education">
+      <div class="section-header">
+        <span class="section-label">Education</span>
+        <span class="section-num">02</span>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-year">2021 &mdash; 2025</div>
+          <div class="edu-degree">Bachelor of Engineering</div>
+          <div class="edu-school">Institute of Engineering, Pulchowk Campus</div>
+          <div class="edu-detail">Aggregate: 84%</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-year">2018 &mdash; 2021</div>
+          <div class="edu-degree">High School / +2</div>
+          <div class="edu-school">Dharan Secondary School</div>
+          <div class="edu-detail">CGPA: 3.82 &middot; Science &amp; Mathematics</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-year">2005 &mdash; 2018</div>
+          <div class="edu-degree">Schooling</div>
+          <div class="edu-school">Nepal Police School, Dharan</div>
+          <div class="edu-detail">GPA: 3.80</div>
         </div>
       </div>
+    </section>
 
-      <div class="education-card">
-        <div class="date">2005–2018</div>
-        <div>
-          <div class="role">Schooling</div>
-          <div class="place">Nepal Police School, Dharan</div>
-          <div class="note">GPA: 3.80</div>
-          <div class="note">Formative years: teamwork, discipline, curiosity</div>
-        </div>
+    <section class="section" id="connect">
+      <div class="section-header">
+        <span class="section-label">Connect</span>
+        <span class="section-num">03</span>
+      </div>
+
+      <div class="connect-grid">
+        <a class="connect-item reveal" href="mailto:mail@praneshpyarashrestha.com.np">
+          Email <span class="connect-arrow">&rarr;</span>
+        </a>
+        <a class="connect-item reveal" href="https://github.com/praneshp1org" target="_blank" rel="noopener">
+          GitHub <span class="connect-arrow">&rarr;</span>
+        </a>
+        <a class="connect-item reveal" href="https://www.linkedin.com/in/praneshp1/" target="_blank" rel="noopener">
+          LinkedIn <span class="connect-arrow">&rarr;</span>
+        </a>
+        <a class="connect-item reveal" href="https://twitter.com/praneshp1org" target="_blank" rel="noopener">
+          Twitter <span class="connect-arrow">&rarr;</span>
+        </a>
+        <a class="connect-item reveal" href="https://www.youtube.com/@PraneshPyaraShrestha" target="_blank" rel="noopener">
+          YouTube <span class="connect-arrow">&rarr;</span>
+        </a>
+        <a class="connect-item reveal" href="https://blogs.praneshpyarashrestha.com.np/" target="_blank" rel="noopener">
+          Blog <span class="connect-arrow">&rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">&copy; 2026 Pranesh Pyara Shrestha</div>
+      <div class="footer-right">
+        <a href="https://www.facebook.com/praneshp1org/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/praneshp1org/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
+  </footer>
 
-    <div class="section">
-      <h2>Certifications</h2>
+  <script>
+    (function() {
+      var btn = document.getElementById('themeBtn');
+      var root = document.documentElement;
+      var stored = localStorage.getItem('t');
 
-      <div class="cert-card">
-        <div>
-          <p class="cert-title">Category &#39;A&#39; General Registered Engineer</p>
-          <p class="cert-issuer">Nepal Engineering Council (NEC Reg. No. 95385)</p>
-        </div>
-      </div>
+      function setDark(on) {
+        root.classList.toggle('dark', on);
+        btn.textContent = on ? '☾' : '☀';
+      }
 
-      <div class="cert-card">
-        <div>
-          <p class="cert-title">AWS Certified Solutions Architect – Associate</p>
-          <p class="cert-issuer">Amazon Web Services (AWS)</p>
-        </div>
-      </div>
-    </div>
+      if (stored === 'd' || (!stored && matchMedia('(prefers-color-scheme:dark)').matches)) {
+        setDark(true);
+      }
 
-    <div class="section">
-      <h2>Projects Delivered/Worked On</h2>
-      
-      <div class="project-card">
-        <h3>TheOver.AI</h3>
-        <p>Sports analytics app for bettors using AI tips and real-time player performance tracking.</p>
-      </div>
+      btn.onclick = function() {
+        var on = root.classList.toggle('dark');
+        btn.textContent = on ? '☾' : '☀';
+        localStorage.setItem('t', on ? 'd' : 'l');
+      };
 
-      <div class="project-card">
-        <h3>SabdaSagar</h3>
-        <p>Offline Nepali dictionary with 100K+ words and speech-to-text powered search.</p>
-      </div>
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
 
-      <div class="project-card">
-        <h3>Nepal Election App 2079</h3>
-        <p>Provided real-time electoral data with visualization and candidate information during Nepal's 2079 elections.</p>
-      </div>
+      reveals.forEach(function(el) { observer.observe(el); });
 
-      <div class="project-card">
-        <h3>MCQ Generation using T5 Transformers (Academic Project)</h3>
-        <p>Built a system using fine-tuned T5-small models for automatic question generation. Trained on SQuAD and RACE datasets for question-answer and distractor generation. Used Hugging Face + PyTorch.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>AI-Powered Loksewa Exam Preparation Platform (Practice Project)</h3>
-        <ul>
-          <li>AI-powered exam preparation platform for Nepal's Public Service Commission (Loksewa) engineering exams</li>
-          <li>Built with React and TypeScript for modern, responsive UI</li>
-          <li>Leverages Google Gemini API to generate both MCQ and subjective questions tailored to specific syllabus topics</li>
-          <li>Covers Computer Science, Electronics, EPF Management, and other technical subjects</li>
-          <li>Features bilingual question support (English/Nepali)</li>
-          <li>Smart question history tracking to avoid duplicates</li>
-          <li>Specialized sections for Acts, CDSC, and EPF regulations</li>
-          <li>Designed to help engineering aspirants practice efficiently with AI-generated questions that adapt to their study needs</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3>Cloud Resource Allocation with PSO (AI Project)</h3>
-        <p>Simulated dynamic cloud resource allocation using Particle Swarm Optimization. Visualized performance with a Flutter-based frontend.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>Speech Recognition & Translation App</h3>
-        <p>Deployed on-device speech-to-text and translation models for Nepali–English. Used TFLite for fast, offline performance.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>AutoLead AI (Python + LangChain + n8n)</h3>
-        <p>LLM-based lead qualification agent that classifies and routes inbound messages using LangChain + OpenAI. Triggered automated actions in n8n (Airtable, email updates, CRM sync).</p>
-      </div>
-
-      <div class="project-card">
-        <h3>DocResponder (Python + FastAPI + RAG)</h3>
-        <p>An RAG-based AI service that answers support queries from documents. Combined FAISS vector search with LangChain and OpenAI for fast, relevant response generation.</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Infrastructure Monitoring and Alerting System</h3>
-        <p>Built monitoring system using Prometheus, Grafana, and Alertmanager with extensive Linux command-line configuration. Deployed using Docker containers and Kubernetes with Helm. Created shell scripts for automated monitoring and alert management.</p>
-      </div>
-      
-      <div class="project-card">
-        <h3>Smart Incident Router (n8n + Slack + PagerDuty)</h3>
-        <p>Automates alert intake from Prometheus/CloudWatch, deduplicates, and classifies severity with LLM. Enriches with runbook context and routes incidents to on‑call via Slack/PagerDuty, with auto‑escalation and Notion post‑mortem summaries.</p>
-      </div>
-
-      <div class="project-card">
-        <h3>IOE Entrance Preparation Platform</h3>
-        <p>A full-featured exam preparation web platform for IOE (Institute of Engineering) entrance aspirants, with role-based access for admins and students.</p>
-        <ul>
-          <li><strong>Role-based login:</strong> separate admin and student dashboards with secure authentication</li>
-          <li><strong>Admin controls:</strong> create and manage questions, schedule and publish/disable exams, and register student accounts</li>
-          <li><strong>Student features:</strong> practice exams anytime, get instant results after submission, and view rank predictions based on score relative to all participants</li>
-          <li><strong>Anti-cheating:</strong> questions and answer options are shuffled randomly for each attempt, eliminating positional memorization</li>
-        </ul>
-      </div>
-    </div>
-
-    
-
-    <div class="section">
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:mail@praneshpyarashrestha.com.np">mail@praneshpyarashrestha.com.np</a></li>
-        <li>GitHub: <a href="https://github.com/praneshp1org" target="_blank" rel="noopener noreferrer">@praneshp1org</a></li>
-        <li>Twitter: <a href="https://twitter.com/praneshp1org" target="_blank" rel="noopener noreferrer">@praneshp1org</a></li>
-        <li>YouTube: <a href="https://www.youtube.com/@PraneshPyaraShrestha" target="_blank" rel="noopener noreferrer">@PraneshPyaraShrestha</a></li>
-        <li>Facebook: <a href="https://www.facebook.com/praneshp1org/" target="_blank" rel="noopener noreferrer">facebook.com/praneshp1org</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/praneshp1org/" target="_blank" rel="noopener noreferrer">instagram.com/praneshp1org</a></li>
-      </ul>
-    </div>
-
-    <footer>
-        <span class="muted">Updated Dec 26, 2025 · 
-          <img src="https://visitor-badge.laobi.icu/badge?page_id=praneshpyarashrestha.com.np" alt="Visitors" style="height:18px; vertical-align:middle;" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-          <span style="display:none;">Visitors counter unavailable</span>
-        </span>
-    </footer>
-    </div>
+      document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
